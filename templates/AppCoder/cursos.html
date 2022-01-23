@@ -1,0 +1,16 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% block contenidoQueCambia %}
+    <h3>Los cursos son...</h3>
+
+    {% for curso in cursos %}
+        {{ curso }}
+        <br>
+    {% endfor %}
+
+    <a class="btn btn-primary" href="{% url 'cursos_formulario' %}">Agregar</a>
+{% endblock %}
+
+{% block titulo %}
+    Cursos
+{% endblock %}
